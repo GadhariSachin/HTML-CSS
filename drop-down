@@ -1,0 +1,147 @@
+Easy way to add drop-down menu in headers
+
+Easy way to add drop-down menu in headers with simple css tricks using class and id's.
+
+Add below code snippet in your header file or in your navbar code.
+
+<div class="dropdown">
+  <a class="button button--navigation dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Courses
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="https://example1.com/">Option 1</a>
+    <a class="dropdown-item" href="https://example2.com/">Option 2</a>
+  </div>
+</div>
+
+
+And add below CSS in your css files
+
+////////////////dropdown css ////////////////////////
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: 4px;
+    content: "";
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+    margin-left: 0;
+}
+
+.dropup .dropdown-menu {
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.dropup .dropdown-toggle::after {
+    border-top: 0;
+    border-bottom: 4px solid;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 103px;
+    padding: 8px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 8px 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 4px 24px;
+    clear: both;
+    font-weight: normal;
+    color: #0F3271;
+    text-decoration: none;
+    text-align: inherit;
+    white-space: nowrap;
+    background: none;
+    border: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #e6e6e6;
+    border-right: 5px solid #0F3271;
+    font-weight: 700;
+    color: #0F3271;
+    text-decoration: none;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+    color: #868e96;
+    background-color: transparent;
+}
+
+.show > a {
+    outline: 0;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.widget-title {
+    font: 20px/26px Arial, sans-serif;
+    background-image: linear-gradient(#40b4e4, #40b4e4), linear-gradient(#40b4e4, #40b4e4), linear-gradient(#40b4e4, #40b4e4), linear-gradient(#40b4e4, #40b4e4);
+    background-repeat: no-repeat;
+    background-size: 8px 3px;
+    background-position: top left, top right, bottom left, bottom right;
+    border: solid #40b4e4;
+    text-align: -webkit-auto;
+    border-width: 0 4px;
+    display: flex;
+    align-items: center;
+    padding: 5px 22px;
+    border-radius: 22px;
+
+}
+////////////////////// END CSS //////////////////////
+
+And it's done. 
+
