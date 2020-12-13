@@ -21,7 +21,7 @@
             ></v-img>
           </template>
         </v-data-table>
-        <!-- <div class="text-center pt-2">
+        <div class="text-center pt-2">
           <v-row>
             <v-col offset="4" cols="2">
               <v-select
@@ -34,13 +34,13 @@
               <v-pagination v-model="page" :length="pageCount"></v-pagination>
             </v-col>
           </v-row>
-        </div> -->
+        </div>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({
