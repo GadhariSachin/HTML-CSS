@@ -84,7 +84,6 @@ export default Vue.extend({
   },
   created() {
     this.fetchCurrencyDataList();
-    this.timer = setInterval(this.fetchCurrencyDataList, 300000);
   },
   methods: {
     fetchCurrencyDataList() {
